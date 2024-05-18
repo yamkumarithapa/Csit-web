@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-    function mouseoverevent()  
-    {  
-        alert("This is an example of mouse over");  
-    }  
-
-</script>
+    <title>Mouseover</title>
 </head>
+<style>
+    .box{
+    background-color: greenyellow;
+    padding: 15%;
+    margin: 10%;
+}
+</style>
 <body>
-    <p onmouseover="mouseoverevent()"> Keep cursor over me</p> 
-
-</body>
+    <div class="box"></div>
+    <script>
+      var box = document.querySelector('.box');
+      box.addEventListener('mouseover', function(event) {
+      box.style.backgroundColor = 'green';
+  });
+  box.addEventListener('mouseout', function(event) {
+    box.style.backgroundColor = 'red';
+  });
+    </script>
+    </body>
+    </html>
 </html>
