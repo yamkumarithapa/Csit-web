@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Email validation</title>
+
+   </head>
+   <body> 
+      <form action="application.html" method="post">
+         Email: <input type="text" name="submit" id="email">
+         <input type="submit" name="submit" value="submit" onclick="return fun()">
+      </form>
+     <script>
+      function fun(){
+         myemail = document.getElementById("email").value ;
+       
+         var pattern = /^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/;
+         var result = pattern.test(myemail);
+         alert(result);
+         if(result == true){
+            return true;
+         }else{
+            return false;
+         }
+      }
+   
+     </script>
+   </body>
+</html>
